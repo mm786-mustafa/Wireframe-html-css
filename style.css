@@ -5,7 +5,7 @@
 
 body {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     flex-direction: column;
     height: 100vh;
@@ -19,14 +19,13 @@ hr {
 
 header {
     width: 100%;
-    
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 2rem;
+    margin: 1.5rem 2rem;
 }
 
 .navbar #logo {
@@ -52,7 +51,7 @@ header {
 }
 
 #introduction p {
-    margin: 0 2rem;
+    margin: 0 9rem;
 }
 
 #introduction button {
@@ -60,6 +59,7 @@ header {
     border-radius: 1.5rem;
     font-size: 1.5rem;
     font-weight: 400;
+    cursor: pointer;
 }
 
 #projects {
@@ -75,15 +75,43 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    gap: 2rem;
 }
 
 #about {
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
     align-items: center;
+    margin: 2rem;
+    gap: 3rem;
 }
+
+#about .aboutme, #about .whatsnew {
+    width: 50%;
+}
+
+#about .whatsnew .item {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 2rem;
+}
+
+#about .whatsnew hr {
+    margin: 1.5rem 0;
+}
+
+#about .whatsnew .item img {
+    width: 150px;
+}
+
+/* #about .whatsnew .item .item-info {
+    
+} */
 
 footer {
     width: 100%;
+    /* position: absolute;
+    left: 0;
+    bottom: 0; */
 }
