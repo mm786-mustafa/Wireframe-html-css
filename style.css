@@ -5,16 +5,21 @@
 
 body {
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     flex-direction: column;
     height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 hr {
-    border: 1px solid;
-    width: 100%;
+    border: 0.0625rem solid;
+    width: 99%;
 }
 
 header {
@@ -25,6 +30,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     margin: 1.5rem 2rem;
 }
 
@@ -35,12 +41,10 @@ header {
 .navbar ul {
     list-style-type: none;
     display: flex;
+    gap: 0.6rem;
 }
 
 #introduction {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
     margin: 2rem 3rem;
     gap: 1.5rem;
@@ -52,14 +56,19 @@ header {
 
 #introduction p {
     margin: 0 9rem;
+    text-align: center;
 }
 
 #introduction button {
     padding: 0.5rem 2rem;
     border-radius: 1.5rem;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 400;
     cursor: pointer;
+}
+
+#introduction button:hover {
+    background-color: lightgrey;
 }
 
 #projects {
@@ -67,22 +76,30 @@ header {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 2rem;
-    width: 100%;
+    /* width: 99%; */
+    padding: 2rem;
+    gap: 1rem;
 }
 
 #projects #cards {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 2rem;
+}
+
+#projects #cards .card p {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: rgb(108, 108, 108);
 }
 
 #about {
     display: flex;
     justify-content: left;
     align-items: center;
-    margin: 2rem;
+    padding: 2rem;
     gap: 3rem;
 }
 
@@ -90,7 +107,11 @@ header {
     width: 50%;
 }
 
-#about .whatsnew .item {
+#about .aboutme h3, #about .whatsnew h3{
+    margin-bottom: 0.5rem;
+}
+
+#about .whatsnew .items .item {
     display: flex;
     justify-content: left;
     align-items: center;
@@ -101,17 +122,43 @@ header {
     margin: 1.5rem 0;
 }
 
-#about .whatsnew .item img {
+#about .whatsnew .items .item img {
     width: 150px;
 }
 
-/* #about .whatsnew .item .item-info {
-    
-} */
+#about .whatsnew .items .item p:nth-child(2) {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: rgb(108, 108, 108);
+}
 
 footer {
     width: 100%;
-    /* position: absolute;
-    left: 0;
-    bottom: 0; */
+    flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+
+    #introduction p {
+        margin: 0;
+    }
+
+    #about {
+        flex-wrap: wrap;
+    }
+
+    #about .aboutme, #about .whatsnew {
+        width: 100%;
+    }
+
+    ul {
+        flex-wrap: wrap;
+    }
+    
+}
+
+@media (max-width: 430px) {
+    #about .whatsnew .items .item {
+        flex-wrap: wrap;
+    }
 }
